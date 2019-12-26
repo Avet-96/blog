@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
-
+import {Link} from "react-router-dom";
+import {goRegistrationPage} from "../../store/action/user";
 
 
 class Registration extends Component {
@@ -12,17 +13,18 @@ class Registration extends Component {
 
 	render() {
 		return (
-			<div>
-				Hello
-			</div>
+			<>
+				<Link className='login__button' onClick={() => this.props.goRegistrationPage()}
+				      to='/registration'>Registration</Link>
+			</>
 		);
 	}
 }
 
-const mapStateToProps = (state) => ({
-});
+const mapStateToProps = (state) => ({});
 
 const mapDispatchToProps = {
+	goRegistrationPage
 };
 
 const Container = connect(

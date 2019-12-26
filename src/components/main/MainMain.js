@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import photo from '../../asets/images/bacgraund.jpg'
+import {addUsersComment} from "../../store/action/user";
 
 class MainMain extends Component {
 	constructor(props) {
@@ -8,6 +9,9 @@ class MainMain extends Component {
 		this.state = {}
 	}
 
+	componentDidMount() {
+		this.props.addUsersComment()
+	}
 
 	render() {
 		return (
@@ -30,7 +34,9 @@ class MainMain extends Component {
 
 const mapStateToProps = (state) => ({});
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+	addUsersComment
+};
 
 const Container = connect(
 	mapStateToProps,

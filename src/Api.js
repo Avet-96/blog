@@ -8,6 +8,12 @@ class Api {
 	static userLogin(email,password) {
 		return axios.post('user/user-sing-in', {email,password})
 	}
+	static addCommentData(text){
+		return axios.post("/add-comet", {text})
+	}
+	static registrationUser(data){
+		return axios.post('user/user-sing-up',data)
+	}
 
 }
 
