@@ -8,7 +8,7 @@ import {
 
 const initialState = {
 	data: [],
-	status:[]
+	status: []
 };
 export default function reducer(state = initialState, action) {
 	switch (action.type) {
@@ -16,7 +16,7 @@ export default function reducer(state = initialState, action) {
 			return {
 				...state,
 				log: action.payload.data.status !== "Error" ?
-					localStorage.setItem('token', action.payload.data.token)
+					localStorage.setItem('token', action.payload.data.token) || alert('login comfortable')
 					: undefined
 
 			}
@@ -24,11 +24,11 @@ export default function reducer(state = initialState, action) {
 		case ADD_USES_COMMENT_SUCCESS: {
 			return {...state, data: action.payload.text}
 		}
-		case ADD_USER_DATA_REGISTRATION_SUCCESS:{
-			return {...state, status:action.payload.data}
+		case ADD_USER_DATA_REGISTRATION_SUCCESS: {
+			return {...state, status: action.payload.data}
 		}
-		case CLEAR_STATUS_REQUEST:{
-			return {...state, status:[]}
+		case CLEAR_STATUS_REQUEST: {
+			return {...state, status: []}
 		}
 		default: {
 			return state

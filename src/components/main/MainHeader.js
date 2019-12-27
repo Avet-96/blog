@@ -11,7 +11,8 @@ class MainHeader extends Component {
 	}
 
 	exitProfil=()=>{
-		localStorage.removeItem('token')
+		localStorage.removeItem('token');
+		alert('Exit your profile')
 	};
 	render() {
 		return (
