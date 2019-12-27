@@ -26,12 +26,15 @@ class Login extends Component {
 		return (
 			<>
 				<form method='POST' className='login__form' onSubmit={this.getUserData}>
+					<label> Email</label>
 					<input
 						className='login__input'
 						type="email" name='email'
 						value={email || ''}
 						onChange={this.handelChange}
+						placeholder='Enter your email'
 					/>
+					<label> Password</label>
 					<input
 						className='login__input'
 						type="password" name='password'

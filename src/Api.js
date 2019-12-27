@@ -14,7 +14,6 @@ class Api {
 	static registrationUser(data){
 		return axios.post('user/user-sing-up',data)
 	}
-
 }
 
 export default Api
