@@ -15,7 +15,7 @@ class Registration extends Component {
 		return (
 			<>
 				<Link className='login__button' onClick={() => this.props.goRegistrationPage()}
-				      to='/registration'>Registration</Link>
+				      to='/registration'>Sign up</Link>
 			</>
 		);
 	}

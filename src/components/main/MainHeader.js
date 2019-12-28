@@ -18,13 +18,12 @@ class MainHeader extends Component {
 		return (
 			<div className='main__header'>
 				<h1 className='blog__logo'>Steve Jobs</h1>
-				<div>
+				<div className='registration__block'>
 					<Login/>
-				</div>
-				<div>
 					<Registration/>
+					<button onClick={this.exitProfil} className='login__button'>Exit</button>
 				</div>
-				<button onClick={this.exitProfil} className='login__button'>Exit</button>
+
 			</div>
 		);
 	}

@@ -27,7 +27,7 @@ export function userRegistration(data) {
 		type:ADD_USER_DATA_REGISTRATION_REQUEST, payload:{data}
 	}
 }
-export const CLEAR_STATUS_REQUEST = 'CLEAR_STATUS_REQUEST'
+export const CLEAR_STATUS_REQUEST = 'CLEAR_STATUS_REQUEST';
 export function goRegistrationPage() {
 	return{
 		type:CLEAR_STATUS_REQUEST
